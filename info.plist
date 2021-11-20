@@ -81,7 +81,7 @@
 	<key>createdby</key>
 	<string>Martín M.</string>
 	<key>description</key>
-	<string>Interact with your Vercel account</string>
+	<string>Quick access your Vercel projects from Alfred</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>

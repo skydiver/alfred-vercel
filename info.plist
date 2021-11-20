@@ -216,6 +216,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Workflow cache cleared successfully</string>
+				<key>title</key>
+				<string>Vercel Workflow</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>C8A2BC3F-CC9B-43AD-AAD4-4717E2FEAFC9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -236,30 +257,20 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>Workflow cache cleared successfully</string>
-				<key>title</key>
-				<string>Vercel Workflow</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>C8A2BC3F-CC9B-43AD-AAD4-4717E2FEAFC9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Workflow setup
+==============
+
+1. Obtain your Vercel token at https://vercel.com/account/tokens
+2. Goto "Workflow Environment Variables"
+3. Set your Vercel `ACCESS_TOKEN`
+4. Optional: change cache timeout value (default: 1 hour)
+
+
+More info
+=========
+https://github.com/skydiver/alfred-vercel</string>
 	<key>uidata</key>
 	<dict>
 		<key>530AA891-55B7-452F-B5CC-2FB40B431D65</key>

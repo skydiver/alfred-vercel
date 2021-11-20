@@ -5,18 +5,19 @@ import datetime
 import json
 
 CACHE_PATH = './_cache/'
+CACHE_TIMEOUT = os.getenv('CACHE_TIMEOUT', 3600)
 
 ################################################################################
 # CHECK IF A CACHE FILE IS EXPIRED
 ################################################################################
-def expired_cache(path, time=3600):
+def expired_cache(path):
     try:
         f = open(CACHE_PATH + path)
         data = f.read()
         f.close()
         mod_date = os.path.getmtime(CACHE_PATH + path)
         mod_timestamp = datetime.datetime.fromtimestamp(mod_date)
-        return (mod_timestamp < datetime.datetime.now() - datetime.timedelta(seconds=time))
+        return (mod_timestamp < datetime.datetime.now() - datetime.timedelta(seconds=int(CACHE_TIMEOUT)))
     except IOError:
         return True
 

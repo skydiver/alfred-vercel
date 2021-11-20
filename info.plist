@@ -322,6 +322,8 @@
 	<dict>
 		<key>ACCESS_TOKEN</key>
 		<string></string>
+		<key>CACHE_TIMEOUT</key>
+		<string>3600</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>

@@ -12,16 +12,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>A9B77D19-3E53-49CB-9DF1-30ADAD1BE148</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>F3413D29-53DC-4944-B79A-0C6BC6B74C33</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
@@ -32,11 +22,34 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>A9B77D19-3E53-49CB-9DF1-30ADAD1BE148</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>DD2036D3-7526-490A-94C9-E141990795CB</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string>Open project settings page</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C5060269-ADA3-456D-ADB7-3F0757172519</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C8A2BC3F-CC9B-43AD-AAD4-4717E2FEAFC9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -53,6 +66,16 @@
 				<key>vitoclose</key>
 				<true/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C5060269-ADA3-456D-ADB7-3F0757172519</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Wipe workflow cache</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -65,6 +88,25 @@
 	<string>Vercel</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://{query}/deployments</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>F3413D29-53DC-4944-B79A-0C6BC6B74C33</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -134,6 +176,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://{query}/settings</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>DD2036D3-7526-490A-94C9-E141990795CB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -155,38 +216,44 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
 				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://{query}/deployments</string>
-				<key>utf8</key>
-				<true/>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>clean.py</string>
+				<key>type</key>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>F3413D29-53DC-4944-B79A-0C6BC6B74C33</string>
+			<string>C5060269-ADA3-456D-ADB7-3F0757172519</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://{query}/settings</string>
-				<key>utf8</key>
-				<true/>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Workflow cache cleared successfully</string>
+				<key>title</key>
+				<string>Vercel Workflow</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>DD2036D3-7526-490A-94C9-E141990795CB</string>
+			<string>C8A2BC3F-CC9B-43AD-AAD4-4717E2FEAFC9</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -198,37 +265,57 @@
 		<key>530AA891-55B7-452F-B5CC-2FB40B431D65</key>
 		<dict>
 			<key>xpos</key>
-			<integer>345</integer>
+			<integer>335</integer>
 			<key>ypos</key>
-			<integer>100</integer>
+			<integer>280</integer>
 		</dict>
 		<key>A9B77D19-3E53-49CB-9DF1-30ADAD1BE148</key>
 		<dict>
+			<key>note</key>
+			<string>Open project page</string>
 			<key>xpos</key>
 			<integer>585</integer>
 			<key>ypos</key>
-			<integer>100</integer>
+			<integer>280</integer>
 		</dict>
-		<key>DD2036D3-7526-490A-94C9-E141990795CB</key>
+		<key>C5060269-ADA3-456D-ADB7-3F0757172519</key>
+		<dict>
+			<key>xpos</key>
+			<integer>340</integer>
+			<key>ypos</key>
+			<integer>680</integer>
+		</dict>
+		<key>C8A2BC3F-CC9B-43AD-AAD4-4717E2FEAFC9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>585</integer>
 			<key>ypos</key>
-			<integer>500</integer>
+			<integer>680</integer>
+		</dict>
+		<key>DD2036D3-7526-490A-94C9-E141990795CB</key>
+		<dict>
+			<key>note</key>
+			<string>Open project settings page</string>
+			<key>xpos</key>
+			<integer>585</integer>
+			<key>ypos</key>
+			<integer>480</integer>
 		</dict>
 		<key>E0571B33-326B-4B01-BC2F-7D5B44F7B6ED</key>
 		<dict>
 			<key>xpos</key>
-			<integer>105</integer>
+			<integer>95</integer>
 			<key>ypos</key>
-			<integer>100</integer>
+			<integer>480</integer>
 		</dict>
 		<key>F3413D29-53DC-4944-B79A-0C6BC6B74C33</key>
 		<dict>
+			<key>note</key>
+			<string>Open project deployments page</string>
 			<key>xpos</key>
 			<integer>585</integer>
 			<key>ypos</key>
-			<integer>300</integer>
+			<integer>80</integer>
 		</dict>
 	</dict>
 	<key>variables</key>

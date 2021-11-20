@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>dev.skydiver.alfred.vercel</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>530AA891-55B7-452F-B5CC-2FB40B431D65</key>
@@ -36,7 +38,7 @@
 	<key>createdby</key>
 	<string>Martín M.</string>
 	<key>description</key>
-	<string></string>
+	<string>Interact with your Vercel account</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -96,7 +98,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string></string>
+				<string>Loading projects ...</string>
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
@@ -117,7 +119,7 @@
 				<key>keyword</key>
 				<string>vercel</string>
 				<key>subtext</key>
-				<string></string>
+				<string>Search your Vercel projects</string>
 				<key>text</key>
 				<string>Vercel Projects</string>
 				<key>withspace</key>

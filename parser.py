@@ -88,7 +88,7 @@ def projects(search=None):
 
         result.append({
             'title': project['name'],
-            'subtitle': 'Team: {}'.format(project['team']),
+            'subtitle': 'Team: {}'.format(project['team']) if project['type'] == 'Team' else project['type'],
             'arg': project['url'],
             'icon': {
                 'path': 'icon.png'

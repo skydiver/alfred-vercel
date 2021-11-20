@@ -76,12 +76,16 @@ def projects_list():
 ################################################################################
 # RETURN PROJECTS ALFRED OBJECT
 ################################################################################
-def projects():
+def projects(search=None):
     projects = projects_list()
 
     result = []
 
     for project in projects:
+
+        if search is not None and project['name'].lower().find(search.lower()) == -1:
+            continue
+
         result.append({
             'title': project['name'],
             'subtitle': 'Team: {}'.format(project['team']),

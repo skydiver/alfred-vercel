@@ -5,7 +5,34 @@
 	<key>bundleid</key>
 	<string>dev.skydiver.alfred.vercel</string>
 	<key>connections</key>
-	<dict/>
+	<dict>
+		<key>530AA891-55B7-452F-B5CC-2FB40B431D65</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A9B77D19-3E53-49CB-9DF1-30ADAD1BE148</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E0571B33-326B-4B01-BC2F-7D5B44F7B6ED</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>530AA891-55B7-452F-B5CC-2FB40B431D65</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+	</dict>
 	<key>createdby</key>
 	<string>Martín M.</string>
 	<key>description</key>
@@ -19,12 +46,78 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>A9B77D19-3E53-49CB-9DF1-30ADAD1BE148</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>projects.py</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>530AA891-55B7-452F-B5CC-2FB40B431D65</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
 				<string>vercel</string>
 				<key>subtext</key>
-				<string>Open your projects</string>
+				<string></string>
 				<key>text</key>
 				<string>Vercel Projects</string>
 				<key>withspace</key>
@@ -33,7 +126,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>E061E12E-4902-4947-A475-961BF200401F</string>
+			<string>E0571B33-326B-4B01-BC2F-7D5B44F7B6ED</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -42,14 +135,37 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>E061E12E-4902-4947-A475-961BF200401F</key>
+		<key>530AA891-55B7-452F-B5CC-2FB40B431D65</key>
 		<dict>
 			<key>xpos</key>
-			<integer>125</integer>
+			<integer>345</integer>
 			<key>ypos</key>
-			<integer>90</integer>
+			<integer>100</integer>
+		</dict>
+		<key>A9B77D19-3E53-49CB-9DF1-30ADAD1BE148</key>
+		<dict>
+			<key>xpos</key>
+			<integer>585</integer>
+			<key>ypos</key>
+			<integer>100</integer>
+		</dict>
+		<key>E0571B33-326B-4B01-BC2F-7D5B44F7B6ED</key>
+		<dict>
+			<key>xpos</key>
+			<integer>105</integer>
+			<key>ypos</key>
+			<integer>100</integer>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>ACCESS_TOKEN</key>
+		<string></string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>ACCESS_TOKEN</string>
+	</array>
 	<key>version</key>
 	<string>1.0.0</string>
 	<key>webaddress</key>

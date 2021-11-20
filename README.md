@@ -9,9 +9,10 @@
 
 
 ## Workflow setup
-1. Goto "Workflow Environment Variables"
-2. Set your Vercel ACCESS_TOKEN
-3. Optional: change cache timeout value (default: 1 hour)
+1. Obtain your Vercel token at https://vercel.com/account/tokens
+2. Goto "Workflow Environment Variables"
+3. Set your Vercel `ACCESS_TOKEN`
+4. Optional: change cache timeout value (default: 1 hour)
 
 
 ## Usage

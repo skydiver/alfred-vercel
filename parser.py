@@ -7,7 +7,7 @@ from vercel import get_user, get_teams, get_projects
 # FETCH USER INFORMATION
 ################################################################################
 def user_info():
-    CACHE_FILE = 'tmp/_user.json'
+    CACHE_FILE = '_user.json'
     EXPIRED = expired_cache(CACHE_FILE)
 
     if (EXPIRED):
@@ -22,7 +22,7 @@ def user_info():
 # FETCH USER TEAMS
 ################################################################################
 def user_teams():
-    CACHE_FILE = 'tmp/_teams.json'
+    CACHE_FILE = '_teams.json'
     EXPIRED = expired_cache(CACHE_FILE)
 
     if (EXPIRED):
@@ -37,7 +37,7 @@ def user_teams():
 # FETCH PROJECTS
 ################################################################################
 def projects_list():
-    CACHE_FILE = 'tmp/_projects.json'
+    CACHE_FILE = '_projects.json'
     EXPIRED = expired_cache(CACHE_FILE)
 
     if (EXPIRED):

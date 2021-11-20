@@ -14,9 +14,9 @@ def expired_cache(path, time=3600):
         f.close()
         mod_date = os.path.getmtime(path)
         mod_timestamp = datetime.datetime.fromtimestamp(mod_date)
-        return (mod_timestamp > datetime.datetime.now() - datetime.timedelta(seconds=time))
+        return (mod_timestamp < datetime.datetime.now() - datetime.timedelta(seconds=time))
     except IOError:
-        return False
+        return True
 
 ################################################################################
 # SAVE JSON OBJECT TO CACHE FILE

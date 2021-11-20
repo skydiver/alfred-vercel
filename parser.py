@@ -11,12 +11,27 @@ def user_info():
     EXPIRED = expired_cache(CACHE_FILE)
 
     if (EXPIRED):
-        data = read_cache(CACHE_FILE)
-    else:
         data = get_user()
         store_cache(data, CACHE_FILE)
+    else:
+        data = read_cache(CACHE_FILE)
 
     return data['user']
+
+################################################################################
+# FETCH USER TEAMS
+################################################################################
+def user_teams():
+    CACHE_FILE = 'tmp/_teams.json'
+    EXPIRED = expired_cache(CACHE_FILE)
+
+    if (EXPIRED):
+        data = get_teams()
+        store_cache(data, CACHE_FILE)
+    else:
+        data = read_cache(CACHE_FILE)
+
+    return data['teams']
 
 ################################################################################
 # FETCH PROJECTS
@@ -26,28 +41,51 @@ def projects_list():
     EXPIRED = expired_cache(CACHE_FILE)
 
     if (EXPIRED):
-        data = read_cache(CACHE_FILE)
-    else:
-        data = get_projects()
+        user = user_info()
+        teams = user_teams()
+        user_projects = get_projects()
+
+        data = []
+
+        for project in user_projects['projects']:
+            data.append({
+                'name': project['name'],
+                'type': 'Personal Account',
+                'team': user['username'],
+                'url': 'https://vercel.com/{}/{}'.format(user['username'], project['name'])
+            })
+
+        for team in teams:
+            team_projects = get_projects(team['id'])
+
+            for project in team_projects['projects']:
+                data.append({
+                    'name': project['name'],
+                    'type': 'Team',
+                    'team': team['name'],
+                    'url': 'https://vercel.com/{}/{}'.format(user['username'], project['name'])
+                })
+
         store_cache(data, CACHE_FILE)
 
-    return data['projects']
+    else:
+        data = read_cache(CACHE_FILE)
+
+    return data
 
 ################################################################################
 # RETURN PROJECTS ALFRED OBJECT
 ################################################################################
 def projects():
-    user = user_info()
     projects = projects_list()
 
     result = []
 
     for project in projects:
-        url = 'https://vercel.com/{}/{}'.format(user['username'], project['name'])
         result.append({
             'title': project['name'],
-            'subtitle': url,
-            'arg': url,
+            'subtitle': 'Team: {}'.format(project['team']),
+            'arg': project['url'],
             'icon': {
                 'path': 'icon.png'
             }

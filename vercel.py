@@ -35,6 +35,6 @@ def get_teams():
 ################################################################################
 # FETCH PROJECTS
 ################################################################################
-def get_projects():
-    response = make_request('v8/projects', params={'limit': 100})
+def get_projects(teamId=None):
+    response = make_request('v8/projects', params={ 'teamId': teamId, 'limit': 100})
     return response

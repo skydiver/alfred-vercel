@@ -63,7 +63,7 @@ def projects_list():
                     'name': project['name'],
                     'type': 'Team',
                     'team': team['name'],
-                    'url': 'vercel.com/{}/{}'.format(user['username'], project['name'])
+                    'url': 'vercel.com/{}/{}'.format(team['name'], project['name'])
                 })
 
         store_cache(data, CACHE_FILE)
